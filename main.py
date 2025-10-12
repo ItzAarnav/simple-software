@@ -19,8 +19,10 @@ while switch:
 
 	tokens = commands.split(";")
 	command = tokens[0]
-	parameter1 = tokens[1]
-	parameter2 = tokens[2]
+	if len(tokens) >= 2:
+		parameter1 = tokens[1]
+	elif len(tokens) == 3:
+		parameter2 = tokens[2]
 
 	if len(tokens) <= 3:
 
@@ -61,8 +63,15 @@ while switch:
 		if command == 'script':
 			if parameter1 == 'create':
 				try:
-					with open(parameter2, 'r') as file:
-						code = file.read()
+					file = open(parameter2, 'x')
 					print(f"Success: {parameter2} has been created.")
+					print("Edit the file with the scripts you need.")
+				except FileExistsError:
+					print("[ERR] This file already exists.")
+			if parameter1 == 'run':
+				try:
+					with open(parameter2, 'r') as file:
+						syntax = file.read()
+					exec(syntax)
 				except:
-					pass
+					print("[ERR] There was an error in your scripts.")
