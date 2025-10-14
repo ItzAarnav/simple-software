@@ -4,10 +4,10 @@ I think I kind of just wanted to make a little data lab, without the data lol.
 
 
 ## Versions
-| Version                            | Description                               |
-|------------------------------------|-------------------------------------------|
+| Version                           | Description                               |
+|-----------------------------------|-------------------------------------------|
 | **[v1.0.0]** Later that year: 2023 | Project ended                             |
-| **[v1.0.0]** Year: 2023            | Release                                   |
+| **[v1.0.0]** Year: 2023           | Release                                   |
 
 Note that this project was finished only 2 days after its release.
 
