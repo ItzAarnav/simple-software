@@ -1,88 +1,83 @@
+import random
 import time
-import os
 
-os.environ['TERM'] = 'xterm-256color'
 
-print("Simple Software")
-time.sleep(1)
-
-print("Loading key assets...")
-# Body code
-
-switch = True
+print("\nPy Data Lab\n")
+print("")
 data = []
-time.sleep(1)
-os.system('clear')
+is_on = True
+command_number = 0
 
-while switch:
-    print("-- Simple Software --\n")
-    commands = input(" >>> ").lower()
-    tokens = commands.split(";")
+role = input("What is your use for Py Data Lab?\nType one of the options\nMake sure to check out this website for further information:https://pydatalab.burfiboy.repl.co/\n(general(needs no domain)/professional): ").lower()
+if role == 'general':
+    print("Welcome to the Py Data Lab,\nIn this lab you will explore many commands\nin the general version:\n - You have free uses\n - You can learn to be a pro")
+    time.sleep(1)
+    use = input("What is your use for Py Data Lab?\n- Learner\n- Teacher\n").lower()
+    if use == 'learner':
+        print("Welcome to the learner dashboard!\n")
+    if use == 'teacher':
+        print("Welcome to the teacher dashboard!\nTeaching Materials are ready-made\n")
+        account = input("Would you like to link to an account")
+if role == 'professional':
+    password = input("Domain: ")
+    if password == '2232':
+        while is_on:
+            commands = input(f"Command Pallete:  #{command_number}; ")
+            command_number += 1
+            if commands == 'give':
+                give = input("\nCommand -> ")
+                if give == 'print':
+                    mime = input("-> ")
+                    print(mime)
 
-    command = tokens[0]
-    if len(tokens) >= 2:
-        parameter1 = tokens[1]
-    else:
-        parameter1 = 'pass'
-    if len(tokens) == 3:
-        parameter2 = tokens[2]
-    else:
-        parameter2 = 'pass'
+            if commands == 'report':
+                report = input("Command -> ")
+                if report == 'data':
+                    data_input = input("Prompt typo -> ")
+                    if data_input == 'd_report':
+                        print(data)
+                    if data_input == 'd_var_new':
+                        set_var = input("d_var_new\ Raw duplicate -> set:set_var:d_var -> ")
+                        d_var = set_var
+                    if data_input == 'd_len':
+                        print(len(data))
+                if report == 'slice':
+                    slce = input("Prompt typo -> ")
+                    if slce == 'item_num':
+                        item_number = input("slice input -> ")
 
-    if len(tokens) <= 3:
-
-        # Software/Console
-        if command == 'write':
-            print(parameter1)
-        if command == 'quit':
-            quit(parameter1)
-        if command == 'clear':
-            print("Clearing in 5 seconds...")
-            time.sleep(5)
-            os.system('clear')
-        if command == 'notify':
-            parameter1 = parameter1.replace('"', '\\"')
-            parameter2 = parameter2.replace('"', '\\"')
-
-            # Use osascript to send the notification
-            os.system(f'''osascript -e 'display notification "{parameter2}" with title "{parameter1.title()}"' ''')
-
-        # Data
-        if command == 'fetch':
-            if parameter1 == 'return':
-                print(data)
-            if parameter1 == 'add':
-                data.append(parameter2)
-            if parameter1 == 'remove':
-                try:
-                    data.remove(parameter2)
-                except ValueError:
-                    print(f"[ERR] '{parameter2}' does not exist")
-            if parameter1 == 'len':
-                print(len(data))
-        if command == 'slice':
-            try:
-                print(data[parameter1:parameter2])
-            except TypeError:
-                print("[ERR] indices inputted wrong")
-        if command == 'notes':
-            print("-- Notes --\n[1] This software is a passion project by ItzAarnav.\n[2] Script command is under "
-                  "experimentation\n[3] Unofficial software; it is not licensed")
-        if command == 'script':
-            print("[ERR] This command is locked.")
-        # if parameter1 == 'create':
-        # 	try:
-        # 		file = open(parameter2, 'x')
-        # 		print(f"Success: {parameter2} has been created.")
-        # 		print("Edit the file with the scripts you need.")
-        # 	except FileExistsError:
-        # 		print("[ERR] This file already exists.")
-        # if parameter1 == 'run':
-        # 	try:
-        # 		with open(parameter2, 'r') as file:
-        # 			syntax = file.read()
-        # 		exec(syntax)
-        # 	except:
-        # 		print("[ERR] There was an error in your scripts.")
-    else:
-        print("[ERR] Perhaps you added an extra parameter")
+            if commands == 'unit':
+                unit = input("Command -> ")
+                if unit == 'u_new':
+                    new_data = input("New data; ")
+                    data.append(new_data)
+                    print("inserted(Check data with report)")
+                if unit == 'u_remove':
+                    remove_data = int(input("Item call#(delete): "))
+                    data.remove(remove_data)
+                if unit == 'u_refactor':
+                    refactor = int(input("Item call#(replace): "))
+                    data.replace(refactor)
+                if unit == 'u_list_delete':
+                    input("Type anything\n")
+                    print("DeLeTe_AlL\n")
+                    repeat = input("Repeat the text above to proceed command\n")
+                    if repeat == 'DeLeTe_AlL':
+                        for item in data:
+                            data.remove(item)
+                        data = 0
+                        print("Successfully Deleted")
+            if commands == 'system':
+                system = input("Command -> ")
+                if system == 'off':
+                    print("OfF_system\n")
+                    repeat = input("Copy the text above\n")
+                    if repeat == 'OfF_system':
+                        is_on = False
+                        print("Offed\nData Cleaned and trashed")
+                if system == 'copyright':
+                    print("""Copyrighted: 2023
+                             presents Data Science Lab
+                             all rights reserved
+                             copyrighted by, ARK,inc,
+                             no public remixes""")

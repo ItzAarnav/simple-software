@@ -1,20 +1,15 @@
 # Simple Software
-My attempt at trying to make a functioning software.
-Honestly, it's kinda easy to make. Tell me what you think.
+My very first attempt at making something related to a software.
+I think I kind of just wanted to make a little data lab, without the data lol.
 
-Latest update - v1.0.4 - Oct 12, 2025
 
 ## Versions
-| Version                   | Description                               |
-|---------------------------|-------------------------------------------|
-| <placeholder>             | <placeholder>                             |
-| **[v1.0.4]** Oct 12, 2025 | `script` command is under experimentation |
-| **[v1.0.2]** Oct 9, 2025  | New `script` command!                     |
-| **[v1.0.0]** Oct 5, 2025  | Release                                   |
+| Version                            | Description                               |
+|------------------------------------|-------------------------------------------|
+| **[v1.0.0]** Later that year: 2023 | Project ended                             |
+| **[v1.0.0]** Year: 2023            | Release                                   |
 
-[1.0.5] Oct 12, 2025 - `Script` command is under experimentation
-[1.0.2] Oct 9, 2025 - New 'script' command! <br>
-[1.0.0] Oct 5, 2025 - Release <br>
+Note that this project was finished only 2 days after its release.
 
 **Made using Python**
 <p>Offcial <span style="color:darkred;bold"><b>✦ ItzAarnav</b></span> production</p>
